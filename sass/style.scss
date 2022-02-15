@@ -1,0 +1,427 @@
+@import url('/assets//font/Atlas-Grotesk-Regular-VH.woff');
+@import url('/assets/font/CenturyStd-LightCondensed-VH.woff');
+
+@font-face {
+  font-family: "CenturyStd-LightCondensed-VH";
+  src: url('/assets/font/CenturyStd-LightCondensed-VH.woff');
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none !important;
+  scroll-behavior: smooth !important;
+  box-sizing: border-box;
+  font-family: "Atlas-Grotesk-Regular-VH", sans-serif;
+}
+  *:focus {
+    outline: 0; }
+  * input::-webkit-outer-spin-button,
+  * input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+    visibility: visible;
+  }
+
+
+
+    :root {
+      --primary-color:        #f13a11;
+      --white-color:          #ffffff;
+      --dark-color:           #171819;
+      --about-bg-color:       #f9f9f9;
+  
+      --gray-color:           #909090;
+      --link-color:           #404040;
+      --p-color:              #666262;
+  
+      --base-font-family:     'Plain', sans-serif;
+      --font-weight-bold:     bold;
+      --font-weight-normal:   normal;
+      --font-weight-light:    300;
+      --font-weight-thin:     100;
+  
+      --h1-font-size:         48px;
+      --h2-font-size:         36px;
+      --h3-font-size:         28px;
+      --h4-font-size:         24px;
+      --h5-font-size:         22px;
+      --h6-font-size:         22px;
+      --p-font-size:          18px;
+      --base-font-size:       16px;
+      --menu-font-size:       14px;
+  
+      --border-radius-large:  100%;
+      --border-radius-small:  2px;
+  }
+
+
+    $font-01: 'Muli', sans-serif;
+    $s1 : .5s;
+    $m-01: #7681A4;
+    $m-02: #5D698D;
+
+    $c-01: #10182F;
+    $c-02: #545D7A;
+    $c-03: #306BF3;
+
+
+    $g-01: linear-gradient(140deg, $m-01, $m-02);
+
+    $neu-01: #F7F8FC;
+    $neu-02: #DAE1F5;
+    $neu-03: #6F7073;
+    $neu-04: #505050;
+    $neu-05: #403E3E;
+
+    @mixin lg {
+        @media screen and (max-width: 1180px) {
+            @content;
+        }
+    }
+
+    @mixin md {
+        @media screen and (max-width: 1023px) {
+            @content;
+        }
+    }
+
+    @mixin sm {
+        @media screen and (max-width: 799px) {
+            @content;
+        }
+    }
+
+    @mixin xs {
+        @media screen and (max-width: 511px) {
+            @content;
+        }
+    }
+  
+    /*---------------------------------------
+       TYPOGRAPHY              
+    -----------------------------------------*/
+  
+    h1,h2,h3,h4,h5,h6 {
+      font-weight: var(--font-weight-thin);
+      line-height: normal;
+    }
+  
+    h1 {
+      font-size: var(--h1-font-size);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+  
+    h2 {
+      font-size: var(--h2-font-size);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: -2px;
+    }
+  
+    h3 {
+      font-size: var(--h3-font-size);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: -1px;
+      margin: 0;
+    }
+  
+    h4 {
+      font-size: var(--h4-font-size);
+    }
+  
+    h5 {
+      font-size: var(--h5-font-size);
+    }
+  
+    h6 {
+      color: var(--gray-color);
+      font-size: var(--h6-font-size);
+      line-height: inherit;
+      margin: 0;
+    }
+  
+    p {
+      color: var(--p-color);
+      font-size: var(--p-font-size);
+      font-weight: var(--font-weight-light);
+      line-height: 1.5em;
+    }
+  
+    b, 
+    strong {
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0;
+    }
+  
+
+    /* START CODING */
+
+    /*---------------------------------------
+       CUSTOMIZE              
+    -----------------------------------------*/
+
+    body {
+      background: var(--white-color);
+      font-family: var(--base-font-family);
+      height: auto;
+    }
+  
+
+  ::selection {
+    background-color: #7681a4;
+    color: #fff;
+  }
+
+    /*---------------------------------------
+       HEADER              
+    -----------------------------------------*/
+  .wrapper {
+    width: 100%;
+    height: auto;
+
+    .header {
+      position: fixed;
+      display: flex;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.8);
+      height: 88px;
+      z-index: 999;
+      .container {
+        margin: 0;
+        padding: 0;
+        height: 88px;
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        .col-header-left {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start !important;
+          flex-direction: row;
+          height: 100%;
+          width: 100%;   
+          .header-logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            img {
+              width: 40%;
+              // width: 100px;
+              display: inline-block;
+              vertical-align: text-bottom;
+              margin-left: 10%;
+            }
+          }
+        }
+
+        /* COL-RIGHT-9 */
+        .col-header-right {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+
+          /* WRAPPER */
+          .header-function {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            /* UL MENU */
+            &__menu {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              height: 100%;
+              li {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                a.link-re {
+                  color: #fff;
+                  margin: 0px 20px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-size: 14px;
+                  font-family: "Atlas-Grotesk-Regular-VH", sans-serif;
+                  font-weight: 600;
+                  height: 100%;
+                  &:link {
+                    color: #444;
+                    text-decoration: none;
+                  }
+                  &:hover {
+                    color: #9eaf3b;
+                    transition: all ease .3s;
+                  }
+                }
+
+                span {
+                  color: #fff;
+                  margin: 0px 20px;
+                  cursor: default;
+                }
+              }
+
+              /* Create li dropdown */
+              li.dropdown {
+                position: relative;
+
+                &:hover .dropdown-content {
+                  visibility: visible;
+                  opacity: 1;
+                  z-index: 1;
+                  transform: translateY(0);
+                  transition-delay: 0s, 0s, .3s;
+                }
+
+                .dropdown-content {
+                  visibility: hidden;
+                  opacity: 0;
+                  position: absolute;
+                  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                  background-color: rgba(0,0,0,0.8);
+                  min-width: 250px;
+                  z-index: 1;
+                  top: 100%;
+                  left: 0;
+                  padding: 20px 0;
+                  transform: translateY(-3em);
+                  transition: all .3s ease 0s, visibility 0s linear .3s, zindex 0s linear 0.01s;
+
+                  a.link-ab {
+                    color: #fff;
+                    display: block;
+                    padding: 10px 0 10px 25px;
+                    font-weight: 600;
+                    &:hover {
+                      color: rgb(99, 98, 98);
+                      transition: all ease .3s;
+                    }
+                  }
+                }
+              }
+            }
+
+            /* CHANGE LANGUAGE */
+            &__flag {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              height: 100%;
+              margin: 0 40px 0 0;
+              img {
+
+              }
+
+              i {
+                color: #fff !important;
+                outline: none;
+              }
+            }
+
+            /* 2 BUTTON: Reservations and Delivery */
+            &__option {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              height: 100%;
+              font-family: "Atlas-Grotesk-Regular-VH", sans-serif;
+              font-weight: 600;
+              letter-spacing: 1px;
+              .btn-res-reservations {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                a {
+                  background-color: #337ab7;
+                  color: #fff;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  padding: 0px 20px;
+                  &:hover {
+                    background-color: rgba(51, 122, 183, .3);
+                    transition: all ease .3s;
+                  }
+                }
+              }
+
+              .btn-res-delivery {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                a {
+                  background-color: #9EAF3B;
+                  color: #fff;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  padding: 0px 20px;
+                  &:hover {
+                    background-color: rgba(158, 175, 59, .3);
+                    transition: all ease .3s;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /* WRAPPER FOR MAIN BACKGROUND */
+    .wrapper-background {
+      width: 100%;
+      height: auto;
+      position: relative;
+      img {
+        width: 100%;
+        z-index: -1;
+      }
+
+      /* TEXT IN CENTER BACKGROUND */
+      .txt-box {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        text-align: center;
+        p {
+          font-weight: normal;
+          font-family: 'CenturyStd-LightCondensed-VH', l serif;
+          letter-spacing: 2px;
+          line-height: 60px;
+          font-size: 46px;
+          color: #fff;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
