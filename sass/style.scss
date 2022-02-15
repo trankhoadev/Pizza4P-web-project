@@ -171,6 +171,13 @@
       background: var(--white-color);
       font-family: var(--base-font-family);
       height: auto;
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: "Atlas-Grotesk-Regular-VH", sans-serif;
+      background: url('/img/background/bg_body.gif') repeat 0 0;
+      // overflow-x: hidden;
     }
   
 
@@ -322,15 +329,66 @@
               display: flex;
               flex-direction: row;
               align-items: center;
-              height: 100%;
+              height: auto;
               margin: 0 40px 0 0;
-              img {
+              /* Wrapper of flag content and this is also dropdown */
+              .wrapper-flag {
 
+                /* btn hover dropdown */
+                .dropdown-btn {
+                  /* Hover caret down */
+                  &:hover .fa-caret-down {
+                    color: #9eaf3b;
+                    transition: all ease .3s;
+                  }
+
+                  /* Show other flag whenever user hover */
+                  &:hover + .dropdown-content {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: all ease 1s;
+                    cursor: pointer;
+                  }
+
+                  img {
+                    cursor: pointer;
+                    transition: all ease .3s;
+                    position: relative;
+                  }
+                }
+
+                .dropdown-content {
+                  position: absolute;
+                  visibility: hidden;
+                  transform: translateY(0);
+                  transition-delay: 0s, 0s, .3s;
+                  opacity: 0;
+                  top: 100%;
+                  left: 0;
+                  z-index: 2;
+                  img {
+                    width: 100%;
+                  }
+                }
               }
 
               i {
-                color: #fff !important;
+                color: #fff;
                 outline: none;
+                margin: 0 0 0 5px;
+                font-size: 70%;
+                z-index: 1;
+                cursor: pointer;
+                &:hover {
+                  color: #9eaf3b;
+                  transition: all ease .3s;
+                }
+                &:hover .dropdown-content {
+                  visibility: visible;
+                  opacity: 1;
+                  transition: all ease 1s;
+                  cursor: pointer;
+                } 
               }
             }
 
@@ -424,4 +482,165 @@
         }
       }
     }
+
+    /* CONTENT WELCOME */
+    section.wrap-content {
+      .content-welcome {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 100px 20px 85px;
+        color: #ccc;
+        &__title {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          justify-content: center;
+          p {
+            display: inline-block;
+            color: #fff;
+            height: auto;
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'CenturyStd-LightCondensed-VH', l serif;
+          }
+          span {
+            display: inline-block;
+            color: #9eaf3b;
+            font-family: 'CenturyStd-LightCondensed-VH', l serif;
+            font-size: 2.5em;
+          }
+        }
+
+        &__text {
+          // display: flex;
+          // flex-direction: column;
+          p {
+            color: #ccc;
+            font-size: 1em;
+            letter-spacing: 1px;
+            font-weight: normal;
+            line-height: 30px;
+          }
+
+          a {
+            margin: 20px 0;
+            display: inline-block;
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 10px 20px;
+            &:hover {
+              color: #9eaf3b;
+              transition: all ease .5s;
+              border: 1px solid #9eaf3b;
+            }
+          }
+        }
+      }
+    }
+
+    /* PRODUCT ITEM */
+    .wrap-product {
+      width: 100vw;
+      height: auto;
+      .container {
+        max-width: 95%;
+        margin: 0px auto;
+        .box-item {
+          display: flex;
+          flex-wrap: nowrap;
+          @include xs {
+            flex-wrap: wrap;
+          }
+        }
+      }
+
+      &__item {
+        display: block;
+        position: relative;
+        padding: 0;
+        margin: 0 .2vw;
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+        }
+        div.bg-change-color {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          cursor: pointer;
+          span {
+            color: #fff;
+            z-index: 1;
+            text-align: center;
+            font-size: 1.7em;
+            font-family: 'CenturyStd-LightCondensed-VH', l serif;
+          }
+        }
+
+        .change-1 {
+          background-color: rgba(158,175,59,.7);
+          &:hover {
+            opacity: 0;
+            transition: all ease-out .3s;
+          }
+        }
+
+        .change-2 {
+          background-color: rgba(78,63,53,.7);
+          &:hover {
+            opacity: 0;
+            transition: all ease-out .3s;
+          }
+        }
+
+        .change-3 {
+          background-color: rgba(58,45,89,.7);
+          &:hover {
+            opacity: 0;
+            transition: all ease-out .3s;
+          }
+        }
+
+        .change-4 {
+          background-color: rgba(51,51,51,.7);
+          &:hover {
+            opacity: 0;
+            transition: all ease-out .3s;
+          }
+        }
+      }
+    }
+
+    .bg-content-1 {
+      background: url('/img/background/img_01.webp') no-repeat 100px -70px;
+    }
   }
+
+    /*---------------------------------------
+       ANIMATION
+    -----------------------------------------*/
+    @keyframes HideandShow {
+      50% {
+        visibility: visible;
+        opacity: 1;
+        animation-duration: 1s;
+        animation: ease;
+      }
+
+      100% {
+        visibility: hidden;
+        opacity: 0;
+        animation-duration: 1s;
+        animation: ease;
+      }
+    }
+
+    /*---------------------------------------
+       CLASS TEMP
+    -----------------------------------------*/

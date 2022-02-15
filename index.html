@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
 
     <!-- FRAMEWORK -->
-    <link rel="stylesheet" href="framework/fontawesome/css/all.css">
+    <!-- <link rel="stylesheet" href="framework/fontawesome/css/all.min.css"> -->
     <link rel="stylesheet" href="framework/aos-master/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head> 
 <body>
 <!-- START WRAPPER -->
@@ -74,7 +75,14 @@
 
                         <!-- 2. flag -->
                         <div class="header-function__flag">
-                            <img src="img/flag-icon/flag-eng.png" alt="">
+                            <div class="wrapper-flag dropdown">
+                                <div class="dropdown-btn wrap-img-re">
+                                    <img src="img/flag-icon/flag-eng.png" alt="">
+                                </div>
+                                <div class="dropdown-content wrap-img-ab">
+                                    <img src="img/flag-icon/flag_vn.png" alt="">
+                                </div>
+                            </div>
                             <i class="fa-solid fa-caret-down"></i>
                         </div>
                         
@@ -106,8 +114,63 @@
         </div>
     </div>
 
-    <div>
-</div>
+    <!-- 1.START CONTENT CODE -->
+    <section class="wrap-content bg-content-1">
+        <div class="content-welcome">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 content-welcome__title">
+                        <p>Welcome to</p>
+                        &nbsp; &nbsp;
+                        <span>Pizza 4P's</span>
+                    </div>  
+
+                    <div class="col-sm-6 content-welcome__text">
+                        <p>With our mission of "Delivering Wow, Sharing Happiness," we have been striving every day to provide the best dining experience to all of our dear guests. A restaurant should not be a place to simply have a meal. We truly want every guest to leave happy with our food, service, and environment that delivers the "Wow" factor. We continue to evolve and improve every day so that we can always fulfill our mission of "Delivering Wow, Sharing Happiness" to every guest.</p>
+                        <a href="#">
+                            About Pizza 4P's
+                            <i class="fa-solid fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. START PRODUCT ITEM -->
+    <div class="wrap-product">
+        <div class="container">
+            <div class="row box-item">
+                <div class="col-sm-3 col-xs-12 wrap-product__item">
+                    <img src="img/product/img_item1.webp" alt="">
+                    <div class="bg-change-color change-1">
+                        <span>House-made Cheese</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 col-xs-12 wrap-product__item">
+                    <img src="img/product/img_item2.webp" alt="">
+                    <div class="bg-change-color change-2">
+                        <span>Farm to Table</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 col-xs-12 wrap-product__item">
+                    <img src="img/product/img_item3.webp" alt="">
+                    <div class="bg-change-color change-3">
+                        <span>Design</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 col-xs-12 wrap-product__item">
+                    <img src="img/product/img_item4.webp" alt="">
+                    <div class="bg-change-color change-4">
+                        <span>Omotenashi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body> 
 </html>
 <!-- JQUERY -->
