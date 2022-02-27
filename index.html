@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="framework/aos-master/dist/aos.css">
 </head> 
 <body>
+<!-- Back to Top Start-->
+<div onclick="clickToTop()" id="back-to-top">
+    <span class="caret-top"></span>
+</div>
+<!-- Back to Top End-->  
+
 <!-- START WRAPPER -->
 <div class="wrapper">
     <!-- START HEADER -->
@@ -22,7 +28,7 @@
             <div class="row">
                 
                 <!-- 1. LEFT SIDE HEADER -->
-                <div class="col-sm-3 col-header-left">
+                <div class="col-sm-3 col-xs-6 col-header-left">
                     <!-- 2. logo -->
                     <a href="/" class="header-logo">
                         <img src="img/logo.png" alt="">
@@ -30,7 +36,7 @@
                 </div>
 
                 <!-- 1. RIGHT SIDE HEADER -->
-                <div class="col-sm-9 col-header-right">
+                <div class="col-sm-9 col-xs-6 col-header-right">
                     <div class="header-function">
 
                         <!-- 2. menu -->
@@ -95,6 +101,23 @@
                         </div>
 
                     </div>
+                    <!-- </END HEADER FUNCTION> -->
+
+
+                    <!-- FOR RESPONSIVE -->
+                    <div class="header-responsive">
+                        <div class="header-responsive__contact">
+                            <a href="#">
+                                <img src="img/icon/icons8-call-24.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="header-responsive__hamburger">
+                             <span></span>
+                             <span></span>
+                             <span></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -115,15 +138,15 @@
     <!-- 1.START CONTENT CODE -->
     <section class="wrap-content bg-content-1">
         <div class="content-welcome">
-            <div class="container">
-                <div class="row">
-                    <div data-aos="fade-right" class="col-sm-6 col-xs-12 content-welcome__title">
+            <div class="container container-content__welcome">
+                <div class="row welcome-box">
+                    <div data-aos="fade-right" class="col-sm-6 col-xs-12 content-welcome__title welcome-box__title">
                         <p>Welcome to</p>
                         &nbsp; &nbsp;
                         <span>Pizza 4P's</span>
                     </div>  
 
-                    <div data-aos="fade-left" class="col-sm-6 col-xs-12 content-welcome__text">
+                    <div data-aos="fade-left" class="col-sm-6 col-xs-12 content-welcome__text welcome-box__text">
                         <p>With our mission of "Delivering Wow, Sharing Happiness," we have been striving every day to provide the best dining experience to all of our dear guests. A restaurant should not be a place to simply have a meal. We truly want every guest to leave happy with our food, service, and environment that delivers the "Wow" factor. We continue to evolve and improve every day so that we can always fulfill our mission of "Delivering Wow, Sharing Happiness" to every guest.</p>
                         <a href="#">
                             About Pizza 4P's
@@ -173,8 +196,8 @@
     <!-- START CONTENT 2 -->
     <section class="wrap-content">
         <div class="content-magic-of-pizza">
-            <div class="container">
-                <div class="row">
+            <div class="container container-content-magic-of-pizza">
+                <div class="row row-content-magic-of-pizza">
                     <div data-aos="fade-right" class="col-sm-6 col-xs-12 content-magic-of-pizza__text">
                         <div class="text-title">
                             <h4>
@@ -207,18 +230,18 @@
             </div>
 
             <div class="our-menu__item">
-                 <div class="container">
-                    <div class="row">
+                 <div class="container container-our-menu">
+                    <div class="row row-our-menu">
                         <div class="col-sm-3 col-xs-12 box-item">
                             <span>SEASONAL</span>
                         </div>
-                        <div class="col-sm-3 col-xs-12 box-item">
+                        <div class="col-sm-3 col-xs-12 box-item box-item__second">
                             <span>PIZZA</span>
                         </div>
                         <div class="col-sm-3 col-xs-12 box-item">
                             <span>FOOD</span>
                         </div>
-                        <div class="col-sm-3 col-xs-12 box-item">
+                        <div class="col-sm-3 col-xs-12 box-item box-item__last">
                             <span>DESSERT</span>
                         </div>
                     </div>
@@ -227,20 +250,109 @@
         </div>
     </div>
 
+    <!-- News and Media -->
+    <div class="wrap-news">
+        <div class="box-news">
+            <div class="box-news__title">
+                <h2 data-aos="fade-up">News & Media</h2>
+            </div>
+
+            <ul>
+                <li data-aos="fade-up" class="box-news__item">
+                    <div class="item-img __item1">
+                        <a class="" href="#"></a>
+                    </div>
+
+                    <div class="item-text">
+                        <a href="#">Creating a healthy and satisfying vegan menu</a>
+                        <span>2022.02.23</span>
+                        <p class="news-item-p-pc">Pizza 4P’s is carrying out environmentally-conscious projects step by step in order to achieve the v...</p>
+                    </div>
+
+                    <div class="item-link">
+                        <p class="news-item-p-mobile">Pizza 4P’s is carrying out environmentally-conscious projects step by step in order to achieve the v...</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </li>
+
+                <li data-aos="fade-up" class="box-news__item">
+                    <div class="item-img __item2">
+                        <a class="" href="#"></a>
+                    </div>
+
+                    <div class="item-text">
+                        <a href="#">Application Value-Added Tax (VAT) 8% from February 08, 2022</a>
+                        <span>2022.02.15</span>
+                        <p class="news-item-p-pc">Dear beloved Guests,According to Decree 15/2022/NĐ-CP date 28 Jan 2022, valid from 01 Feb 2022 to ...</p>
+                    </div>
+
+                    <div class="item-link">
+                        <a href="#">Read More</a>
+                        <p class="news-item-p-mobile">Dear beloved Guests,According to Decree 15/2022/NĐ-CP date 28 Jan 2022, valid from 01 Feb 2022 to ...</p>
+                    </div>
+                </li>
+
+                <li data-aos="fade-up" class="box-news__item">
+                    <div class="item-img __item3">
+                        <a class="" href="#"></a>
+                    </div>
+
+                    <div class="item-text">
+                        <a href="#">Cozy at home date night with pizza 4P’s</a>
+                        <span>2022.02.09</span>
+                        <p class="news-item-p-pc">There is nothing more romantic than enjoying your favorite dishes with your special someone by candl...</p>
+                    </div>
+
+                    <div class="item-link">
+                        <a href="#">Read More</a>
+                        <p class="news-item-p-mobile">There is nothing more romantic than enjoying your favorite dishes with your special someone by candl...</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <!-- FOOTER -->
     <div class="footer-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2">
-                    <img src="img/logo.png" alt="">
+        <div class="container container-footer">
+            <div class="row row-footer">
+                <div class="col-sm-2 footer-wrapper__logo">
+                    <a href="/">
+                        <img src="img/logo.png" alt="">
+                    </a>
                 </div>
-                <div class="col-sm-4 col-xs-12">
-                    <a href="#">Company Profile</a>
+
+                <div class="col-sm-4 col-xs-12 footer-wrapper__about-company">
+                    <div class="about-company__left">
+                        <a href="#">Company Profile</a>
+                    </div>
                     <span>|</span>
-                    <p>Follow us</p>
+                    <div class="about-company__right">
+                        <p>Follow us</p>
+                        <a href="#">
+                            <img src="assets/svg/icons8-facebook-f.svg" width="20px" height="15px" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/svg/icons8-instagram.svg" width="20px" height="20px" alt="">
+                        </a>
+                    </div>
                 </div>
-                <div class="col-sm-4 col-xs-12"></div>
-                <div class="col-sm-2 col-xs-12"></div>
+
+                <div class="col-sm-4 col-xs-12 footer-wrapper__contact">
+                    <div class="contact-left">
+                        <p>For inquiry:</p>
+                        <a href="mailto:info@pizza4ps.com">info@pizza4ps.com</a>
+                    </div>
+
+                    <div class="contact-right">
+                        <p>For feedback:</p>
+                        <a href="mailto:feedback@pizza4ps.com">feedback@pizza4ps.com</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-xs-12 footer-wrapper__copyright">
+                    <p>© 2022 Pizza 4P’s</p>
+                </div>
             </div>
         </div>
     </div>
