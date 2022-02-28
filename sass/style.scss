@@ -175,7 +175,7 @@
       padding: 0;
       text-align: center;
       font-family: "Atlas-Grotesk-Regular-VH", sans-serif;
-      background: url('/img/background/bg_body.gif') repeat 0 0;
+      background: url(../img/background/bg_body.gif) repeat 0 0;
       overflow-x: hidden;
     }
   
@@ -1004,7 +1004,7 @@
       width: 100%;
       height: auto;
       .our-menu {
-        background: url('/img/background/bg_menu.webp') no-repeat 0 0;
+        background: url(../img/background/bg_menu.webp) no-repeat 0 0;
         width: 100%;
         background-size: cover;
         padding: 55px 0 45px;
@@ -1200,7 +1200,7 @@
     .wrap-news {
       width: 100%;
       height: auto;
-      background: url('/img/background/bg-for-news-and-media2.png') no-repeat right bottom 0,url('/img/background/bg-for-news-and-media1.png') no-repeat -10px -50px;
+      background: url(../img/background/bg-for-news-and-media2.png) no-repeat right bottom 0,url(../img/background/bg-for-news-and-media1.png) no-repeat -10px -50px;
 
       .box-news {
         max-width: 810px;
@@ -1769,13 +1769,13 @@
 
     /* All background */
     .bg-content-1 {
-      background: url('/img/background/img_01.webp') no-repeat 100px -70px;
+      background: url(../img/background/img_01.webp) no-repeat 100px -70px;
     }
 
     .__item1 {
       width: 112px;
       height: 112px;
-      background-image: url('/img/product/news-item01.png');
+      background-image: url(../img/product/news-item01.png);
       background-size: cover;
       background-repeat: no-repeat;
       z-index: -1;
@@ -1785,7 +1785,7 @@
     .__item2 {
       width: 112px;
       height: 112px;
-      background-image: url('/img/product/news-item02.png');
+      background-image: url(../img/product/news-item02.png);
       background-size: cover;
       background-repeat: no-repeat;
       z-index: -1;
@@ -1795,7 +1795,7 @@
     .__item3 {
       width: 112px;
       height: 112px;
-      background-image: url('/img/product/news-item03.png');
+      background-image: url(../img/product/news-item03.png);
       background-size: cover;
       background-repeat: no-repeat;
       z-index: -1;
